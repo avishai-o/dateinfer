@@ -57,7 +57,7 @@ RULES = [
     If(Sequence(Hour12, '.', MonthNum), SwapSequence([Hour24, '.', MonthNum], [DayOfMonth, KeepOriginal, MonthNum])),
     If(Sequence(Hour24, '.', MonthNum), SwapSequence([Hour24, '.', MonthNum], [DayOfMonth, KeepOriginal, MonthNum])),
     If(Duplicate(MonthNum), Swap(MonthNum, DayOfMonth)),
-    If(Sequence(F('+'), Year4), SwapSequence([F('+'), Year4], [UTCOffset, None])),
+#     If(Sequence(F('+'), Year4), SwapSequence([F('+'), Year4], [UTCOffset, None])),
 #     If(Sequence(F('-'), Year4), SwapSequence([F('-'), Year4], [UTCOffset, None])),
     If(Sequence(MonthNum, F(':'), '\d'),
        SwapSequence([MonthNum, F(':'), '.'], [Hour12, F(':'), Minute])),
